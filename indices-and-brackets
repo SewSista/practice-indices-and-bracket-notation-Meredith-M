@@ -1,28 +1,36 @@
-/* You are managing a library system where books and movies are stored in a 2D
-array, with each row representing a shelf, and each column representing an item
-on that shelf.
+/* 
+You are managing a library system where books and movies are stored in a 2D array, 
+with each row representing a shelf, and each column representing an item on that shelf.
+
 Tasks
 Make sure to write the code for each task using only bracket notation.
-Task 1: Create a multi-dimensional array with nine books and/or movies of your
-choice.
-Task 2: Access and log all the elements in the array using bracket notation with
-numbers.
+
+Task 1: Create a multi-dimensional array with nine books and/or movies of your choice.
+
+Task 2: Access and log all the elements in the array using bracket notation with numbers.
+
 Task 3: Access and log all the elements in the array using bracket notation with
 variables as indices. Use the variables row and item.
-Task 4: Write a loop that prints all the items on the second shelf. */
+
+Task 4: Write a loop that prints all the items on the second shelf. 
+*/
 
 let libraryMedia = [
-    ["Carrie","Christine ", "Cujo "],
-    ["Gerald's Game ", "It" , "Pet Cemetary "],
-    ["The Shining ", "The Stand ", "The Tommyknockers "],
+    ["Carrie", "Christine", "Cujo"],
+    ["Firestarter", "It", "Pet Cemetary"],
+    ["The Shining", "The Stand", "The Tommyknockers"], // multidimensional array with 3 rows and 3 columns
 ];
-console.log("Library Media" + " " + libraryMedia);
 
-let row = 0;
-let row2 = 1;
-let row3 = 2;
-let item = 0;
-let item2 = 1;
-let item3 = 2;
-console.log(libraryMedia[row][item]);
+console.log("First Shelf: ", libraryMedia[0][0], libraryMedia[0][1], libraryMedia[0][2]); // pulls values from the first row
+console.log("Second Shelf: ", libraryMedia[1][0], libraryMedia[1][1], libraryMedia[1][2]); // pulls values from the second row
+console.log("Third Shelf: ", libraryMedia[2][0], libraryMedia[2][1], libraryMedia[2][2]); // pulls values from the third row
 
+for (let row = 0; row < libraryMedia.length; row++) {
+ for (let item = 0; item < libraryMedia[row].length; item++) {
+ console.log("Book Title: "+ libraryMedia[row][item]); // nested for loop to iterate through the multidimensional array
+ }
+}
+
+for (let shelf = 0; shelf < libraryMedia[1].length; shelf++) {
+ console.log("Second Shelf: "+ libraryMedia[1][shelf]);
+ } // for loop to iterate through the second row of the multidimensional array
